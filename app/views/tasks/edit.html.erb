@@ -1,7 +1,13 @@
-<%= form_for(@task) do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :details %>
-  <%= f.text_field :details %>
-  <%= f.submit %>
-<% end %>
+<div class="m-3">
+  <%= form_for(@task) do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <%= f.label :details %>
+    <%= f.text_field :details %>
+    <%# <%= f.check_box :completed %>
+    <label>
+          <%= f.check_box :completed %> Completed
+        </label>
+    <%= f.submit %>
+  <% end %>
+</div>
