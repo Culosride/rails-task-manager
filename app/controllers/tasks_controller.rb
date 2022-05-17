@@ -11,12 +11,20 @@ class TasksController < ApplicationController
 
   def new
     @task = Task.new
-    # raise
   end
 
   def create
     @task = Task.new(task_par)
     @task.save
+    redirect_to task_path(@task)
+  end
+
+  def edit
+
+  end
+
+  def update
+    @task.update(task_par)
     redirect_to task_path(@task)
   end
 

@@ -3,3 +3,6 @@
   <li><%= @task.details%></li>
   <li><%= @task.completed ? "Completed!" : "Not completed!" %></li>
 </ul>
+
+<%= link_to "Edit task", edit_task_path %>
+<%# <%= link_to "Destroy task", destroy_task_path %>
