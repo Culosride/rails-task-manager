@@ -10,6 +10,8 @@
 </ul>
 
 <%= link_to "Edit task", edit_task_path %>
-<%# <%= link_to "Destroy task", destroy_task_path %>
-
+<%= link_to "Delete",
+  task_path(@task),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
 <%= link_to "Home", root_path %>
